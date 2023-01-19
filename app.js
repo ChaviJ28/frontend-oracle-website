@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyparser = require('body-parser');
-var pug = require('pug');
+var ejs = require('ejs');
 var methodOverride = require('method-override');
 
 app.use(bodyparser.json())
@@ -11,7 +11,7 @@ app.use(bodyparser.json())
 
 //serve static assets
 app.use(express.static(__dirname + "/public"));
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 //define routes
 const indexRoutes = require('./routes/index.js')
