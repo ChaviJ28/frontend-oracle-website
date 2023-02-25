@@ -22,6 +22,7 @@ module.exports.viewForm = async (req, res) => {
             formData = {};
         if (formResponse && formResponse.data && formResponse.data[0]) {
             formData = formResponse.data[0];
+            formData.app_url = process.env.APP_URL
             if (formData.status == "active") {
                 res.render('form/viewform', formData);
             } else {
@@ -29,7 +30,8 @@ module.exports.viewForm = async (req, res) => {
                     id: "closed",
                     title: formData.title,
                     status: formData.status,
-                    message: "Form Unavailable"
+                    message: "Form Unavailable",
+                    app_url: "process.env.APP_URL"
                 })
             }
         } else {
@@ -37,7 +39,8 @@ module.exports.viewForm = async (req, res) => {
                 id: "unexistant",
                 title: "ERROR 404",
                 status: "404",
-                message: "Form Not Found"
+                message: "Form Not Found",
+                app_url: "process.env.APP_URL"
             })
         }
     } catch (err) {
