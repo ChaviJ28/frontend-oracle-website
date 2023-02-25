@@ -27,7 +27,7 @@ function ajaxLoad(params) {
         data: params.data,
         type: getPost,
         beforeSend: function(request) {
-            return request.setRequestHeader('X-CSRF-Token', params._csrf);
+            // return request.setRequestHeader('X-CSRF-Token', params._csrf);
         },
         success: function(data) {
 
