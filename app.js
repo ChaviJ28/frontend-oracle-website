@@ -15,9 +15,8 @@ app.use(bodyparser.json())
 app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
-app.use(cors({
-    origin: 'http://beta.forms.uomoracleclub.com'
-}));
+app.options('*', cors())
+app.use(cors());
 // app.use(function(req, res, next) {
 
 //     // Website you wish to allow to connect
