@@ -54,6 +54,15 @@ p {
     font-size: 70px ;
 }
 
+.welcomeFormText .sub-heading {
+    text-transform: unset;
+}
+
+.welcomeFormText .main-heading {
+    text-transform: uppercase;
+    font-size: 60px ;
+}
+
 
 /* ---------------- buttons ---------------- */
 button {
@@ -182,6 +191,12 @@ button {
     .landingText{
         margin-bottom: 35px !important;
     }
+
+    .errorText{
+        margin-bottom: 25px !important;
+        font-size: 20px;
+    }
+
     p {
         color: white;
     }
@@ -276,6 +291,12 @@ button {
     .landingText{
         margin-bottom: 25px !important;
     }
+
+    .errorText{
+        margin-bottom: 25px !important;
+        font-size: 30px;
+    }
+
     p {
         color: white;
     }
@@ -349,6 +370,10 @@ button {
    
     p {
         color: white;
+    }
+    .errorText{
+        margin-bottom: 25px !important;
+        font-size: 40px;
     }
     .sub-heading {
         text-align: center !important;

@@ -10,6 +10,16 @@ module.exports.newtemplate = async (req, res) => {
     }
 }
 
+module.exports.welcomeForm = async (req, res) => {
+    try {
+        res.render('form/welcomeform', {
+            app_url: process.env.APP_URL
+        })
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports.viewForm = async (req, res) => {
     try {
         // 63c841833843ff4241ef7078

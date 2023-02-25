@@ -1,7 +1,10 @@
 module.exports.home = async (req, res) => {
     try {
         //API CALL
-        res.render('homepage', { blogs: [], banner:[] })
+        res.render('homepage', {
+            blogs: [],
+            banner: []
+        })
     } catch (err) {
         console.log(err)
     }
@@ -29,3 +32,8 @@ module.exports.member = (req, res) => {
     res.render('join');
 }
 
+module.exports.error = (req, res) => {
+    res.render('error', {
+        app_url: process.env.APP_URL
+    });
+}
