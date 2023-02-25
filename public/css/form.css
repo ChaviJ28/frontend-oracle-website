@@ -2,3 +2,7 @@
     border:none !important;
     border-left: 6px solid #8c52ff !important;
 }
+
+#formSubmitBtn {
+    float: right;
+}
