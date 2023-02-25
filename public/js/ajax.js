@@ -29,8 +29,8 @@ function ajaxLoad(params) {
         type: getPost,
         headers: {
             accept: "application/json",
-            Access-Control-Allow-Origin: "*"
-        }
+            "Access-Control-Allow-Origin": "*"
+        },
         beforeSend: function(request) {
             // return request.setRequestHeader('X-CSRF-Token', params._csrf);
         },
