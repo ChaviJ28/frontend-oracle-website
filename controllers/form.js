@@ -22,10 +22,7 @@ module.exports.viewForm = async (req, res) => {
             formData = {};
         if (formResponse && formResponse.data && formResponse.data[0]) {
             formData = formResponse.data[0];
-            console.log(typeof formData)
             formData["app_url"] = process.env.APP_URL
-            console.log(formData)
-            
             if (formData.status == "active") {
                 res.render('form/viewform', formData);
             } else {
