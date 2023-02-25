@@ -4,6 +4,7 @@ var bodyparser = require('body-parser');
 var request = require('request');
 var ejs = require('ejs');
 var methodOverride = require('method-override');
+var cors = require('cors');
 
 app.use(bodyparser.json())
     .use(bodyparser.urlencoded({
@@ -13,6 +14,11 @@ app.use(bodyparser.json())
 //serve static assets
 app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
+
+app.use(cors({
+    origin: ['https://beta.forms.uomoracleclub.com/', 'http://beta.forms.uomoracleclub.com/']
+}));
+
 
 //define routes
 const indexRoutes = require('./routes/index.js')
