@@ -153,8 +153,13 @@ $(document).ready(function() {
             return;
         };
 
+        var url = "/form/submit";
+        if(document.domain.includes("beta.forms")){
+            url= "http://beta.uomoracleclub.com"
+        }
+
         var params = {
-            url: "/form/submit",
+            url: url,
             success_callback_function: successCallback,
             error_callback_function: errorCallback,
             show_success_message: true,
