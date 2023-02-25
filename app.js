@@ -16,7 +16,7 @@ app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: ['https://beta.forms.uomoracleclub.com/', 'http://beta.forms.uomoracleclub.com/']
+    origin: ['https://beta.forms.uomoracleclub.com', 'http://beta.forms.uomoracleclub.com'] 
 }));
 
 
