@@ -1,5 +1,6 @@
 function ajaxLoad(params) {
     var getPost = "POST";
+    var dataType = "jsonp";
     params.requireJson = true;
 
     if (params.method) {
@@ -26,6 +27,10 @@ function ajaxLoad(params) {
         url: params.url,
         data: params.data,
         type: getPost,
+        headers: {
+            accept: "application/json",
+            Access-Control-Allow-Origin: "*"
+        }
         beforeSend: function(request) {
             // return request.setRequestHeader('X-CSRF-Token', params._csrf);
         },

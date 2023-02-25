@@ -153,9 +153,9 @@ $(document).ready(function() {
             return;
         };
 
-        var url = "/form/submit";
-        if(document.domain.includes("beta.forms")){
-            url= "http://beta.uomoracleclub.com"
+        var url = "/form/submit"
+        if (document.domain.includes("beta.forms")) {
+            url = "http://beta.uomoracleclub.com/submit"
         }
 
         var params = {
