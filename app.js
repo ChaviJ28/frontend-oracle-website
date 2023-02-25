@@ -16,24 +16,23 @@ app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: '*'
+    origin: 'http://beta.forms.uomoracleclub.com'
 }));
+// app.use(function(req, res, next) {
 
-app.use(function(req, res, next) {
+//     // Website you wish to allow to connect
+//     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
+//     // Request headers you wish to allow
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+//     // Set to true if you need the website to include cookies in the requests sent
+//     // to the API (e.g. in case you use sessions)
+//     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware
-    next();
-})
+//     // Pass to next layer of middleware
+//     next();
+// })
 
 
 //define routes
