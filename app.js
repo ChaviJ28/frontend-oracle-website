@@ -16,9 +16,7 @@ app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    allRoutes: true,
-    allowOrigins: '*',
-    allowCredentials: false,
+    origin: '*'
 }));
 
 
