@@ -155,7 +155,7 @@ $(document).ready(function() {
 
         var url = "/form/submit"
         if (document.domain.includes("beta.forms")) {
-            url = "http://beta.uomoracleclub.com/submit"
+            url = "/submit"
         }
 
         var params = {
