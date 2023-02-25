@@ -31,7 +31,7 @@ module.exports.viewForm = async (req, res) => {
                     title: formData.title,
                     status: formData.status,
                     message: "Form Unavailable",
-                    app_url: "process.env.APP_URL"
+                    app_url: process.env.APP_URL
                 })
             }
         } else {
@@ -40,7 +40,7 @@ module.exports.viewForm = async (req, res) => {
                 title: "ERROR 404",
                 status: "404",
                 message: "Form Not Found",
-                app_url: "process.env.APP_URL"
+                app_url: process.env.APP_URL
             })
         }
     } catch (err) {
