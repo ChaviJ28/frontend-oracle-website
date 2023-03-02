@@ -13,11 +13,6 @@ $(document).ready(function() {
             e.preventDefault();
             clearForm();
         });
-
-        $(".form-group").click(function(e) {
-            e.preventDefault();
-            clearExistingValidations();
-        });
     }
 
     function validateResponse() {
