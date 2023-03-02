@@ -8,9 +8,15 @@ $(document).ready(function() {
             e.preventDefault();
             onSubmit();
         });
+
         $("#formClearBtn").click(function(e) {
             e.preventDefault();
             clearForm();
+        });
+
+        $(".form-group").click(function(e) {
+            e.preventDefault();
+            clearExistingValidations();
         });
     }
 
@@ -77,7 +83,6 @@ $(document).ready(function() {
         return true;
 
     }
-
 
     function clearForm() {
         clearExistingValidations();
