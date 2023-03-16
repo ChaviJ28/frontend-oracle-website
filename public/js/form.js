@@ -1,12 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initListeners();
+    var ambient = new Ambient();
+    ambient.mount();
 
     function initListeners() {
-        $("#formSubmitBtn").click(function(e) {
+        $("#formSubmitBtn").click(function (e) {
             e.preventDefault();
             onSubmit();
         });
-        $("#formClearBtn").click(function(e) {
+
+        $("#formClearBtn").click(function (e) {
             e.preventDefault();
             clearForm();
         });
@@ -14,29 +17,70 @@ $(document).ready(function() {
 
     function validateResponse() {
         //check required=true fields as well
-        if (validateEmailInputs()) {
-            return true;
-        }
-        return false;
-    }
-
-    function validateEmailInputs() {
-        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,
-            formBlocks = $(".form-group");
+        var formBlocks = $(".form-group");
         for (var i = 0; i < formBlocks.length; i++) {
-            var formGroup = formBlocks.eq(i)
-            if (getFormGroupType(formGroup) == "email") {
-                if (!testEmail.test(formGroup[0].children[1].value)) {
-                    console.log("email failed");
-                    //display error to user
-                    return false;
+            var formGroup = formBlocks.eq(i);
+            if (checkRequiredFields(formGroup) == true) {
+                if (getFormGroupType(formGroup) == "email") {
+                    if (!validateEmailInputs(formGroup)) {
+                        return false;
+                    }
                 }
+            } else {
+                return false
             }
         }
         return true;
     }
 
+    function displayFieldError(formGroup, message) {
+        formGroup[0].children[1].classList.add("invalid-form");
+        var errorLabel = formGroup[0].querySelector(".form-control-error");
+        errorLabel.innerHTML = ' ' + message;
+        errorLabel.classList.add("error-message-style");
+    }
+
+    function clearExistingValidations() {
+        $(".invalid-form").removeClass("invalid-form");
+        $(".form-control-error").html("");
+    }
+
+    function checkRequiredFields(formGroup) {
+        var requiredLabel = formGroup[0].querySelector(".required-label");
+        if (requiredLabel != null && requiredLabel.attributes[1].value == 'true') {
+            if (getFormGroupType(formGroup) == "radio") {
+                if ($("#form-radio-block-" + getFormGroupIndex(formGroup) + " input:radio:checked").val() == undefined) {
+                    displayFieldError(formGroup, "This is a required Field")
+                    return false;
+                }
+            } else if (getFormGroupType(formGroup) == "checkbox") {
+                if ($("#form-checkbox-block-" + getFormGroupIndex(formGroup) + " input:checked").length < 1) {
+                    displayFieldError(formGroup, "This is a required Field")
+                    return false;
+                }
+            } else {
+                if (formGroup[0].children[1].value.length < 1) {
+                    displayFieldError(formGroup, "This is a required Field")
+                    return false;
+                };
+            }
+        }
+        return true;
+    }
+
+    function validateEmailInputs(formGroup) {
+        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        if (!testEmail.test(formGroup[0].children[1].value)) {
+            //display error to user
+            displayFieldError(formGroup, "Must be a Valid Email Address")
+            return false;
+        }
+        return true;
+
+    }
+
     function clearForm() {
+        clearExistingValidations();
         $("input:radio").prop("checked", false);
         $("input:checked").prop("checked", false);
         $("input[type=text], input[type=email], textarea").val("");
@@ -48,6 +92,7 @@ $(document).ready(function() {
     }
 
     function onSubmit() {
+        clearExistingValidations();
         if (validateResponse()) {
             submit(getResponses());
         }
@@ -127,7 +172,7 @@ $(document).ready(function() {
                 type: "checkbox",
                 question: getFormGroupQuestion(formGroup),
             };
-        $("#form-checkbox-block-" + getFormGroupIndex(formGroup) + " input:checked").each(function() {
+        $("#form-checkbox-block-" + getFormGroupIndex(formGroup) + " input:checked").each(function () {
             answer.push($(this)[0].value);
         });
         obj.answer = answer;
@@ -149,7 +194,7 @@ $(document).ready(function() {
             clearForm();
         };
 
-        var errorCallback = function(resp) {
+        var errorCallback = function (resp) {
             return;
         };
 

@@ -1,8 +1,70 @@
+.form-container {
+    width: 640px !important;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.ambient-visible{
+    width: 100% !important;
+    height: 160px !important;
+}
+
+.ambient__shadow {
+    z-index: 0 !important;
+    -webkit-filter: blur(250px) !important;
+    -moz-filter: blur(250px) !important;
+    -ms-filter: blur(250px) !important;
+    filter: blur(250px) !important;
+}
+
 .card {
-    border:none !important;
+    border: none !important;
     border-left: 6px solid #8c52ff !important;
 }
 
+.card-banner {
+    border: none !important;
+}
+
+.form-description {
+    font-size: 16px;
+    margin-top: 1.5rem;
+}
+
 #formSubmitBtn {
-    float: right;
+    margin: 0 auto !important;
+    width: 40% !important;
+    display: block;
+}
+
+#formClearBtn {
+    background: none;
+    cursor: pointer;
+}
+
+#formClearBtn:hover {
+    text-decoration: underline;
+}
+
+.required-label {
+    color: red;
+}
+
+.invalid-form {
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.30rem rgba(255, 0, 0, 0.25);
+}
+
+.error-message-style {
+    font-size: 15px;
+    color: red;
+    font-style: italic;
+}
+
+.form-check-label, option, .form-select {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 15px !important;
 }
