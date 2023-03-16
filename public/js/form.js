@@ -1,15 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initListeners();
-    var ambient = new Ambient ();
-    ambient.mount ();
+    var ambient = new Ambient();
+    ambient.mount();
 
     function initListeners() {
-        $("#formSubmitBtn").click(function(e) {
+        $("#formSubmitBtn").click(function (e) {
             e.preventDefault();
             onSubmit();
         });
 
-        $("#formClearBtn").click(function(e) {
+        $("#formClearBtn").click(function (e) {
             e.preventDefault();
             clearForm();
         });
@@ -36,7 +36,7 @@ $(document).ready(function() {
     function displayFieldError(formGroup, message) {
         formGroup[0].children[1].classList.add("invalid-form");
         var errorLabel = formGroup[0].querySelector(".form-control-error");
-        errorLabel.innerHTML = ' <svg width="18px" height="18px" style="margin-bottom:3px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 16.99V17M12 7V14M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#ff0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>' + message;
+        errorLabel.innerHTML = ' ' + message;
         errorLabel.classList.add("error-message-style");
     }
 
@@ -172,7 +172,7 @@ $(document).ready(function() {
                 type: "checkbox",
                 question: getFormGroupQuestion(formGroup),
             };
-        $("#form-checkbox-block-" + getFormGroupIndex(formGroup) + " input:checked").each(function() {
+        $("#form-checkbox-block-" + getFormGroupIndex(formGroup) + " input:checked").each(function () {
             answer.push($(this)[0].value);
         });
         obj.answer = answer;
@@ -194,7 +194,7 @@ $(document).ready(function() {
             clearForm();
         };
 
-        var errorCallback = function(resp) {
+        var errorCallback = function (resp) {
             return;
         };
 

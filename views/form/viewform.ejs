@@ -48,14 +48,14 @@
         <form data-id="<%= id%>" class="form_<%= id%>">
 
           <div class="card card-banner">
-              <img src="https://lh6.googleusercontent.com/lhy0KLZEeqT9vhLjR5ZAsUAIyw6ALcveSnrXMf9cEZrQN6JkAtvjhUJYSGGyuTqWvpHlYnhbLhbuLsjybZjs6NjYWRonXeEDFqEjE0Ex_V9nw3hfkR0LCH3PyLlXpsGrLA=w6667" class="" alt="" data-ambient>
+              <img src="http://localhost:6840/<%=banner%>" class="" alt="" data-ambient>
           </div>
 
           <div class="card mt-3">
             <div class="card-body">
               <h4><%= title %></h4>
 
-              <p class="text-black form-description">Description</p>
+              <p class="text-black form-description"><%- description %></p>
             </div>
           </div>
           <% if(status == "active"){ %>
@@ -220,8 +220,7 @@
   <script type="text/javascript" src="<%= app_url %>/js/ambient.min.js"></script>
   <script type="text/javascript" src="<%= app_url %>/js/ajax.js"></script>
   <script type="text/javascript" src="<%= app_url %>/js/form.js"></script>
-
-
+  
 </body>
 
 </html>

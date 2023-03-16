@@ -24,15 +24,11 @@
 
 .card-banner {
     border: none !important;
-    /*width: 100%;
-    height: 160px;
-    background: url(https://lh6.googleusercontent.com/lhy0KLZEeqT9vhLjR5ZAsUAIyw6ALcveSnrXMf9cEZrQN6JkAtvjhUJYSGGyuTqWvpHlYnhbLhbuLsjybZjs6NjYWRonXeEDFqEjE0Ex_V9nw3hfkR0LCH3PyLlXpsGrLA=w6667);
-    background-size: cover;
-    background-position: center;*/
 }
 
 .form-description {
     font-size: 16px;
+    margin-top: 1.5rem;
 }
 
 #formSubmitBtn {
