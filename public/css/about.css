@@ -1,0 +1,162 @@
+section {
+    height: 100vh;
+    padding-top: 10rem; 
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.dark-bg {
+    background-color: #191d30;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.our-club {
+    position: relative;
+    max-width: 100%;
+}
+
+.timeline {
+    position: relative;
+    max-width: 100%;
+}
+
+.about {
+    position: relative;
+    max-width: 100%;
+    height: 60vh !important;
+}
+
+.executives {
+    position: relative;
+    max-width: 100%;
+}
+
+.developers {
+    position: relative;
+    max-width: 100%;
+}
+
+.contributors {
+    position: relative;
+    max-width: 100%;
+    height: 60vh !important;
+}
+
+.about .title h3 {
+    margin-bottom: 0;
+}
+
+.about hr {
+    width: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px !important;
+    height: 5px !important;
+    color: #984EFF;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.section-title {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 5%;
+}
+
+.vl {
+    margin-left: 10px;
+    border-left: 2px solid #fff;
+    height: 6rem;
+}
+
+.vl-black {
+    margin-left: 10px;
+    border-left: 2px solid #000;
+    height: 6rem;
+}
+
+.section-title .text {
+    margin: 2rem 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    /* text-transform: uppercase; */
+}
+
+.ambient__container{
+    display: flex;
+    margin: auto;
+}
+
+.ambient__visible {
+    width: 950px !important;
+    height: 500px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.ambient__shadow {
+    height: 510px !important;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slide-block {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main-slide-image {
+    margin: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slide-image {
+    margin: 0;
+    padding:0;
+    width: 150px;
+    border: 2px solid #000;
+    height: 104px !important;
+}
+
+.slide-image img{
+    object-fit: cover;
+}
+
+.slides {
+    margin-top: 5rem;
+    /* width: 800px !important; */
+    height: 9rem !important;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    scrollbar-color: #b078ff #000;
+    scrollbar-width: 1rem;
+}
+
+.slides::-webkit-scrollbar {
+    width: 1rem;
+}
+   
+.slides::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px #000; */
+    background-color: #000;
+}
+   
+.slides::-webkit-scrollbar-thumb {
+    background-color: #b078ff;
+    outline: 1px solid #b078ff;
+}
+
+.executives .col-8 {
+    background: url('../images/about/frame.png') no-repeat, #191d30;
+    background-size: contain;
+}
