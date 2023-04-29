@@ -38,7 +38,7 @@
 </head>
 
 <body>
-  <%- include('partials/navbar.ejs') %>
+  <!-- <%- include('partials/navbar.ejs') %> -->
   <div class="wrapper">
 
     <section class="our-club dark-bg row">
@@ -55,7 +55,7 @@
 
       <div class="col-8">
         <div class="slide-block">
-          <img class="main-slide-image" src="https://uomoracleclub.com/images/about/aboutSlider2.jpg" width="1200" height="800" data-ambient>
+          <img class="main-slide-image" src="https://uomoracleclub.com/images/about/aboutSlider2.jpg" width="1200" height="500" data-ambient>
         </div>
         <div class="slide-block slides">
           <div class="slide-image">
@@ -109,7 +109,7 @@
           <h3>About Oracle Club</h3>
         </div>
         <hr>
-        <div class="content text-center">
+        <div class="content-text-allign">
           <p>The UoM Oracle Club is a club stemming from the Faculty of Information Communication and Digital Technologies whose aim is to work in proximity with the industry to leverage learning and development opportunities and acquire knowledge and exposure to
             enhance employability and innovation potential. As for our vision, we want to establish the Oracle Ambassador
             club as a National Club encompassing all local universities.
@@ -136,6 +136,9 @@
         </div>
       </div>
       <div class="col-8">
+        <div class="title text-center">
+          <h3>Title</h3>
+        </div>
       </div>
     </section>
 
@@ -147,10 +150,50 @@
           <div class="vl"></div>
         </div>
       </div>
-      <div class="col-8"></div>
+      <div class="col-8">
+        <div class="row">
+          <div class = "col">
+            <div class="executives-details-center">
+              <hr>
+              <div class = "executives-details">
+                <div class = "executives-name">
+                  <h5 style="color:#B078FF">Pravesh Gowreea</h5>
+                </div>
+                <div class = "executives-course">
+                  <h6 style="color:#B078FF">BSc Software Engineering</h6>
+                  <br>
+                </div>
+                <div class = "executives-description">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, adipisci. Ipsam, quo minus alias et delectus rerum magnam corrupti, amet dolor mollitia doloribus ullam blanditiis dolores provident nam sed quis!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class = "col">
+            <div class="executives-photos text-center">
+              <img src="https://uomoracleclub.com/images/about/aboutSlider2.jpg" width="300" height="350">
+              <p>President</p>
+            </div>
+          </div>
+
+          <div class = "col">
+            <div class="grid">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
-    <section class="developers">
+    <section class="developers row">
       <div class="col-2">
         <div class="section-title">
           <div class="vl-black"></div>
@@ -158,11 +201,38 @@
           <div class="vl-black"></div>
         </div>
       </div>
+
       <div class="col-8">
+        <div class="title text-center">
+          <h3>Core Developers</h3>
+        </div>
+        <hr>
+        <div class = "core-developers row">
+          <div class="developer-grid">
+            <div class="developer1">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg" width="100%" height="100%">
+              <p>Developer 1</p>
+            </div>
+            <div class="developer2">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg" width="100%" height="100%">
+              <p>Developer 2</p>
+            </div>
+            <div class="developer3">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg" width="100%" height="100%">
+              <p>Developer 3</p>
+            </div>
+            <div class="developer4">
+              <img src="https://st4.depositphotos.com/9998432/22597/v/450/depositphotos_225976914-stock-illustration-person-gray-photo-placeholder-man.jpg" width="100%" height="100%">
+              <p>Developer 4</p>
+            </div>
+      
+          </div>
+        </div>
       </div>
+
     </section>
     <hr>
-    <section class="contributors">
+    <section class="contributors row">
       <div class="col-2">
         <div class="section-title">
           <div class="vl-black"></div>
@@ -171,10 +241,14 @@
         </div>
       </div>
       <div class="col-8">
+        <div class="title text-center">
+          <h3>Contributors</h3>
+        </div>
+        <hr>
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati alias a nostrum explicabo error architecto, quae repudiandae aspernatur quia vero culpa rem ab tempora delectus aperiam veritatis ratione, tenetur nobis.</p>
       </div>
     </section>
   </div>
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
